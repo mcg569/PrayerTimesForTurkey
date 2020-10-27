@@ -15,6 +15,10 @@ namespace MuslimWidget
         public Form1()
         {
             if (!Directory.Exists(PathManager.folder)) Directory.CreateDirectory(PathManager.folder);
+
+            ayet = new Ayetler();
+            hadis = new Hadisler();
+
             ServicePointManager.Expect100Continue = true;
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             InitializeComponent();
@@ -30,8 +34,8 @@ namespace MuslimWidget
 
 
         #region Notification
-        private Ayetler ayet = new Ayetler();
-        private Hadisler hadis = new Hadisler();
+        private Ayetler ayet ;
+        private Hadisler hadis;
         private void AddNotification()
         {
             string title = "", content = "";
