@@ -210,7 +210,7 @@ namespace MuslimWidget
                     yatsi = splitDay[6]
                 };
 
-                if (pt.date == DateTime.Now.ToShortDateString()) //today
+              if (pt.date == DateTime.Now.ToShortDateString() || pt.date == "0" + DateTime.Now.ToShortDateString()) //today => 1.01.2020  || 01.01.2020
                 {
                     lbl_date_today.Text = "Bugün " + DateTime.Now.ToLongDateString();
                     lbl_imsak_time.Text = pt.imsak;
